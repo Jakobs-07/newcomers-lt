@@ -159,7 +159,7 @@ mark {
 
 /* Ranka rašyti užrašai */
 .scribble, .scribble-inline { font-family: "Caveat", cursive; font-weight: 600; color: var(--blue); line-height: 1; }
-.scribble { display: flex; align-items: flex-end; gap: 4px; margin: -6px 0 12px 8px; font-size: 1.7rem; transform: rotate(-3deg); }
+.scribble { display: flex; align-items: flex-end; gap: 4px; margin: 0 0 20px 8px; font-size: 1.7rem; transform: rotate(-3deg); }
 .scribble svg { width: 46px; height: 34px; fill: none; stroke: var(--blue); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 .scribble-inline { display: inline-block; font-size: 1.35rem; margin-left: 6px; transform: rotate(-4deg); }
 
