@@ -33,43 +33,10 @@
 
   <!-- HERO -->
   <section id="start" class="hero">
-   <div class="hero-grid">
-    <div class="hero-text">
     <p class="hello" lang="uk">Привіт! <span lang="lt">Labas!</span> Hi!</p>
     <h1>Just moved to Lithuania? <mark>Start here.</mark><svg class="spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3c1 9 3 14 17 17-14 3-16 8-17 17-1-9-3-14-17-17 14-3 16-8 17-17z"/></svg></h1>
     <p class="lead">This site is for <strong>Ukrainian teenagers (14–18)</strong> who are starting at a Lithuanian gymnasium, and for <strong>their parents</strong>. Three short videos and four trusted links. Everything you need for your first weeks.</p>
-    </div>
 
-    <!-- Dešinėje: pirmos savaitės lapelis ir ranka pieštas žemėlapis -->
-    <div class="hero-side">
-      <div class="note">
-        <h2 class="note-title">My first week</h2>
-        <ul class="checklist">
-          <li><label><input type="checkbox" data-key="enrol"> <span>Parents contact the municipality</span></label></li>
-          <li><label><input type="checkbox" data-key="ediary"> <span>Get my e-diary login</span></label></li>
-          <li><label><input type="checkbox" data-key="teacher"> <span>Meet my class teacher</span></label></li>
-          <li><label><input type="checkbox" data-key="words"> <span>Say <i lang="lt">labas</i> and <i lang="lt">ačiū</i></span></label></li>
-          <li><label><input type="checkbox" data-key="club"> <span>Try one club</span></label></li>
-        </ul>
-      </div>
-      <figure class="map">
-        <svg viewBox="0 0 300 215" role="img" aria-labelledby="map-title">
-          <title id="map-title">Hand-drawn map of Lithuania with Klaipėda, Kaunas, Trakai and Vilnius</title>
-          <defs>
-            <filter id="wobble"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter>
-          </defs>
-          <path class="land" filter="url(#wobble)" d="M12 38 L39 19 L82 14 L116 16 L155 21 L184 16 L208 30 L237 32 L266 47 L280 66 L290 96 L261 111 L242 129 L239 148 L227 170 L174 200 L150 196 L131 189 L107 164 L94 166 L97 125 L68 113 L24 99 L15 66 Z"/>
-          <path class="trip" d="M217 141 C 195 120, 170 118, 150 125 S 60 70, 18 65"/>
-          <g class="city"><circle cx="18" cy="65" r="5"/><text x="28" y="60">Klaipėda</text></g>
-          <g class="city"><circle cx="150" cy="125" r="5"/><text x="118" y="112">Kaunas</text></g>
-          <g class="city"><circle cx="200" cy="145" r="4"/><text x="158" y="166">Trakai</text></g>
-          <g class="city capital"><path d="M217 131l3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1z"/><text x="212" y="172">Vilnius</text></g>
-        </svg>
-        <figcaption>Lithuania is small, so trips are short!</figcaption>
-      </figure>
-    </div>
-
-    <div class="hero-route">
     <p class="scribble" aria-hidden="true">pick one!<svg viewBox="0 0 60 44"><path d="M4 6c14-4 30 0 38 12 4 6 6 13 5 20M38 30l9 9 7-11"/></svg></p>
     <ol class="route" aria-label="What is on this page">
       <li><a href="#school"><span class="n">1</span><span><b>How school works</b><small>Video · 2–3 min</small></span></a></li>
@@ -77,8 +44,6 @@
       <li><a href="#life"><span class="n">3</span><span><b>Life outside school</b><small>Video · 2–3 min</small></span></a></li>
       <li><a href="#resources"><span class="n">+</span><span><b>Useful links</b><small>4 resources</small></span></a></li>
     </ol>
-    </div>
-   </div>
   </section>
 
   <!-- VIDEO 1 -->
@@ -246,15 +211,6 @@
       box.classList.add('soon');
       box.innerHTML = '<p><span aria-hidden="true">▶</span> Video coming soon</p>';
     }
-  });
-
-  // Pirmos savaitės lapelis: varnelės prisimenamos šiame įrenginyje (jei naršyklė leidžia).
-  document.querySelectorAll('.checklist input').forEach(function (box) {
-    var key = 'firstweek-' + box.dataset.key;
-    try { box.checked = localStorage.getItem(key) === '1'; } catch (e) {}
-    box.addEventListener('change', function () {
-      try { localStorage.setItem(key, box.checked ? '1' : '0'); } catch (e) {}
-    });
   });
 
   // Frazių kortelės: paspaudus parodomas vertimas į ukrainiečių kalbą.
